@@ -27,7 +27,7 @@ app.get("/api/user", (req, res) => {
         });
 });
 
-app.get("/api/user/create", (req, res) => {
+app.post("/api/user/create", (req, res) => {
     const sqlConnection = mysql.createConnection(sqlConfig);
 
     sqlConnection.query("INSERT INTO node_users VALUES (NULL, 'bob2@yopmail.fr', 'pass', 'bob', 'jesaispas', '1990-03-17')", (error, result) => {
